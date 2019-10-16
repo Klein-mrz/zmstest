@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="hello" class="Spring.entity.hello"
+     init-method="init" destroy-method="destroy">
+<!--        scope singleton单例模式 prototype每次new新的-->
+        <property name="massage" value="Hello Spring!"/>
+    </bean>
+
+    <bean class="Spring.initHello" />
+
+</beans>
