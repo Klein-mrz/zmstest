@@ -52,9 +52,9 @@
 <!--        该标签有一个可选属性type可以指定用户自己创建的注释生成类。
 提供了3个可选属性suppressAllComments，suppressDate，addRemarkComments
 分别用来阻止生成注释、阻止生成的注释包含时间戳、注释是否添加数据库表中的备注信息。-->
-        <commentGenerator >
-            <property name="suppressAllComments" value="true"/>
-            <property name="suppressDate" value="true"/>
+        <commentGenerator type="third.mybatis.myCommentGenerator" >
+<!--            <property name="suppressAllComments" value="true"/>-->
+<!--            <property name="suppressDate" value="true"/>-->
             <property name="addRemarkComments" value="true"/>
         </commentGenerator>
 <!--        jdbcConnection标签：该标签配置了连接的数据库信息。-->
@@ -108,7 +108,8 @@
                 注意：如果在key class或者record class中有root class相同的属性，MBG就不会重新生成这些属性了，包括：
                     1，属性名相同，类型相同，有相同的getter/setter方法；
              -->
-            <property name="rootClass" value="com._520it.mybatis.domain.BaseDomain"/>
+<!--            这个父类没找到-->
+<!--            <property name="rootClass" value="com._520it.mybatis.domain.BaseDomain"/>-->
 
             <!-- 设置是否在getter方法中，对String类型字段调用trim()方法 -->
             <property name="trimStrings" value="true"/>
