@@ -1,6 +1,8 @@
 package myBatis.entity;
 
-public class Manager {
+import com._520it.mybatis.domain.BaseDomain;
+
+public class Manager extends BaseDomain {
     private Integer id;
 
     private String name;

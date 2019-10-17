@@ -1,6 +1,9 @@
 package myBatis.entity;
 
-public class Department {
+import com._520it.mybatis.domain.BaseDomain;
+
+
+public class Department extends BaseDomain {
     private Integer deptid;
 
     private String name;
