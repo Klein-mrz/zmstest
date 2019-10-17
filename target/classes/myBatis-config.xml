@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/dbexe?useSSL=false&amp;serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="zmz980126"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+<!--        <mapper resource="myBatis/dao/WorkerMapper.xml"/>-->
+<!--        <mapper resource="myBatis/dao/ManagerMapper.xml"/>-->
+<!--        <mapper resource="myBatis/dao/DepartmentMapper.xml"/>-->
+<!--        如果是非注解模式的话xml配置文件必须也处于同一级 package 下，且与Mapper类同名-->
+<!--        <package name=""/>-->
+        <package name="myBatis.mapper"/>
+        <package name="myBatis.mappers"/>
+    </mappers>
+</configuration>
