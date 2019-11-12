@@ -52,7 +52,7 @@
 <!--        该标签有一个可选属性type可以指定用户自己创建的注释生成类。
 提供了3个可选属性suppressAllComments，suppressDate，addRemarkComments
 分别用来阻止生成注释、阻止生成的注释包含时间戳、注释是否添加数据库表中的备注信息。-->
-        <commentGenerator >
+        <commentGenerator type="third.mybatis.myCommentGenerator" >
 <!--            <property name="suppressAllComments" value="true"/>-->
 <!--            <property name="suppressDate" value="true"/>-->
             <property name="addRemarkComments" value="true"/>

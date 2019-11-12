@@ -2,6 +2,14 @@
 <!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <plugins>
+        <plugin interceptor="myBatis.common.myInterceptor">
+            <property name="zmzInterceptor" value="z1z1z"/>
+        </plugin>
+                <plugin interceptor="com.github.pagehelper.PageInterceptor">
+                    <property name="param1" value="value1"/>
+                </plugin>
+    </plugins>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC" />
@@ -13,13 +21,18 @@
             </dataSource>
         </environment>
     </environments>
+
+
+
     <mappers>
-<!--        <mapper resource="myBatis/dao/WorkerMapper.xml"/>-->
+<!--        <mapper resource="myBatis/dao/WorkerMapper.xml" />-->
 <!--        <mapper resource="myBatis/dao/ManagerMapper.xml"/>-->
 <!--        <mapper resource="myBatis/dao/DepartmentMapper.xml"/>-->
 <!--        如果是非注解模式的话xml配置文件必须也处于同一级 package 下，且与Mapper类同名-->
 <!--        <package name=""/>-->
+
         <package name="myBatis.mapper"/>
-        <package name="myBatis.mappers"/>
+<!--        <package name="myBatis.mappers"/>-->
     </mappers>
+
 </configuration>
